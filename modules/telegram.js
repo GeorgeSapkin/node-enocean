@@ -92,7 +92,7 @@ var Manufacturer_List = M
 // 	]
 
 module.exports = function enocean_Telegram( ) {
-	this.timestamp = Date.now()
+	this.timestamp = new Date()
 	this.loadFromBuffer    = function( buf ) {
 		this.rawByte       = buf.toString( "hex" ) // store the original Buffer as a string in .rawByte
 		var dataLength     = 255 * buf[ 1 ] + buf[ 2 ] // length of the Data Part of the telegram
